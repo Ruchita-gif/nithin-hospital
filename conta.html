@@ -1,0 +1,56 @@
+<header>
+  <div class="logo-container">
+    <img src="Images/hospital-logo.png" alt="Nithin Hospital Logo" class="main-logo">
+  </div>
+</header>
+
+<section class="contact-form">
+  <h2>Contact Us</h2>
+  <form id="enquiryForm">
+    <div class="form-group">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required 
+             pattern="[A-Za-z ]{3,}" title="Please enter at least 3 characters">
+    </div>
+    
+    <div class="form-group">
+      <label for="phone">Mobile Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter 10-digit mobile number" required
+             pattern="[0-9]{10}" title="Please enter a valid 10-digit number">
+    </div>
+    
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email">
+    </div>
+    
+    <div class="form-group">
+      <label for="query">Your Query</label>
+      <textarea id="query" name="query" placeholder="Please describe your enquiry" required
+                minlength="10" maxlength="500"></textarea>
+    </div>
+    
+    <div class="form-group">
+      <button type="submit" class="submit-btn">
+        <i class="fas fa-paper-plane"></i> Send Enquiry
+      </button>
+    </div>
+  </form>
+</section>
+
+<script>
+  document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    // Form validation and submission logic would go here
+    alert('Thank you for your enquiry. We will contact you shortly.');
+    this.reset();
+  });
+</script>
+
+<footer>
+  <div class="footer-content">
+    <img src="Images/certification-logo.png" alt="Quality Certification" class="cert-logo">
+    <p>© 2023 Nithin Hospital. All Rights Reserved.</p>
+  </div>
+</footer>
+  

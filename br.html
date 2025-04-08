@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nithin Hospital - Branches</title>
+    <link rel="stylesheet" href="Style.CSS">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <section class="branch-info">
+        <h2>Vajarahalli Branch</h2>
+        <div class="branch-details">
+            <p><i class="fas fa-map-marker-alt"></i> 123, 2nd Cross Rd, HBR Layout, Bengaluru, Karnataka 560043</p>
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> +91 80 1234 5678</p>
+                <p><i class="fas fa-envelope"></i> vajarahalli@nithinhospital.com</p>
+                <p><i class="fas fa-clock"></i> Open: Mon-Sun 8:00 AM - 8:00 PM</p>
+            </div>
+        </div>
+        
+        <div id="map"></div>
+    </section>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([12.896, 77.579], 15);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        
+        L.marker([12.896, 77.579]).addTo(map)
+            .bindPopup('<b>Zymus Hospital</b><br>Nithin Hospital Branch')
+            .openPopup();
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Rest of the CSS remains unchanged */
+/* Header & Navigation */
+header {
+    background: #d10000;
+    color: #ff0000;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav {
+    padding: 10px 0;
+    background: #006080;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+/* Hero Section */
+.hero {
+    background: url('Images/hospital1.jpg') no-repeat center center/cover;
+    height: 400px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    position: relative;
+    filter: hue-rotate(-20deg) saturate(1.5);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 0, 0, 0.1);
+    mix-blend-mode: multiply;
+}
+
+.hero h1,
+.hero-content p,
+.hero h2 {
+    color: #ff0000;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.services h2,
+.services h3,
+.services p,
+.cta h2,
+.cta p,
+.kidney-care-section,
+.kidney-care-title,
+.kidney-care-desc {
+    color: #000000 !important;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+/* Doctor Profile */
+.doctor-profile {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 30px;
+    border: 3px solid #007b9e;
+}
+
+/* Branch Info */
+.branch-info {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+#map {
+    height: 400px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Utility Classes */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        height: 300px;
+        font-size: 1.5rem;
+    }
+    
+    nav a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-photo {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}
